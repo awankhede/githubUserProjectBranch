@@ -127,6 +127,7 @@ Tests are under `src/test/java`. They cover controller and service logic, includ
   - API responses are mapped into Java objects and transformed into a consolidated DTO (`UserResponse`).
 
 - Error handling:
+  - If username inputted is empty, the call fails.
   - If main GitHub URL details are empty, the call fails.
   - If repo GitHub URL details are empty, a warning is logged, but a 200 response still returns other details.
   - If any service error occurs, the service throws an error with details (mapped to appropriate HTTP status).
