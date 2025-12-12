@@ -19,6 +19,9 @@ public class UserController {
     @GetMapping("/users/{username}")
     public ResponseEntity<UserResponse> getUerDetail(@PathVariable String username){
         try {
+            if (username == null || username.isEmpty()) {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username cannot be empty");
+            }
             UserResponse userResponse = githubUserService.getUserDetail(username);
             return new ResponseEntity<>(userResponse, HttpStatus.OK);
         }  catch (RuntimeException e) {
