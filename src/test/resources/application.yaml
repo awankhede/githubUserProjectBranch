@@ -1,0 +1,3 @@
+github:
+  api:
+    user-base-url: "https://api.github.com/users/"

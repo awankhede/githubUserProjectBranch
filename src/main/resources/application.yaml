@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: githubUserProject
+
+github:
+  api:
+    user-base-url: "https://api.github.com/users/"
+    repo-base-url: "https://api.github.com/repos/"
